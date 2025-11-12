@@ -1,0 +1,14 @@
+2025-11-12 11:33:49 | INFO | 数据库连接成功: macro_data_base
+2025-11-12 11:33:49 | INFO | [Function: create_table started...]
+2025-11-12 11:33:49 | INFO | 表 macro_intial_data_monthly 创建成功，包含 18 列
+2025-11-12 11:33:49 | INFO | 成功插入 205 行数据到表 macro_intial_data_monthly
+2025-11-12 11:33:49 | INFO | [Function: create_table completed, elapsed time: 0.09s]
+2025-11-12 11:33:49 | INFO | [Function: create_table started...]
+2025-11-12 11:33:49 | INFO | 表 macro_raw_con_data_monthly 创建成功，包含 7 列
+2025-11-12 11:33:49 | INFO | 成功插入 199 行数据到表 macro_raw_con_data_monthly
+2025-11-12 11:33:49 | INFO | [Function: create_table completed, elapsed time: 0.04s]
+2025-11-12 11:33:49 | INFO | [Function: create_table started...]
+2025-11-12 11:33:49 | INFO | 表 macro_high_freq_data_weekly_yoy 创建成功，包含 6 列
+2025-11-12 11:33:49 | INFO | 成功插入 864 行数据到表 macro_high_freq_data_weekly_yoy
+2025-11-12 11:33:49 | INFO | [Function: create_table completed, elapsed time: 0.09s]
+2025-11-12 11:33:49 | INFO | 数据库连接已关闭
