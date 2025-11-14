@@ -236,3 +236,13 @@
 2025-11-13 15:48:59 | INFO | 成功从表 allocation_pool_1_price_daily 加载数据，形状: (4638, 15)
 2025-11-13 15:48:59 | INFO | [Function: load_table completed, elapsed time: 0.05s]
 2025-11-13 15:48:59 | INFO | 数据库连接已关闭
+2025-11-14 09:23:43 | INFO | 数据库连接成功: macro_data_base
+2025-11-14 09:23:43 | INFO | [Function: load_table started...]
+2025-11-14 09:23:44 | INFO | 成功从表 macro_high_freq_data_weekly_mom_1 加载数据，形状: (892, 7)
+2025-11-14 09:23:44 | INFO | [Function: load_table completed, elapsed time: 0.06s]
+2025-11-14 09:23:44 | INFO | 数据库连接已关闭
+2025-11-14 09:23:51 | INFO | 数据库连接成功: price_data_base
+2025-11-14 09:23:51 | INFO | [Function: load_table started...]
+2025-11-14 09:23:51 | INFO | 成功从表 allocation_pool_1_price_daily 加载数据，形状: (4638, 15)
+2025-11-14 09:23:51 | INFO | [Function: load_table completed, elapsed time: 0.08s]
+2025-11-14 09:23:51 | INFO | 数据库连接已关闭
