@@ -426,8 +426,8 @@ if __name__ == '__main__':
     
     # 日常更新数据
     # raw_macro_data_to_db_update()
-    hf_asset_data_to_db_update()
-    # LF_macro_data_to_db_update()
+    # hf_asset_data_to_db_update()
+    LF_macro_data_to_db_update()
     
     # 查看数据
     with easy_manager.EasyManager(database='macro_data_base') as em:

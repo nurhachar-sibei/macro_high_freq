@@ -53,7 +53,7 @@ class LF_macro_factor_cal:
             return pd.Series(index=series.index, dtype=float)
         
         # 定义2012年和2013年的分界点
-        cutoff_date = pd.Timestamp('2012-12-31')
+        cutoff_date = pd.Timestamp('2020-12-31')
         
         # 创建结果Series
         full_trend = pd.Series(index=series.index, dtype=float)
