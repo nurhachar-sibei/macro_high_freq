@@ -1,0 +1,6 @@
+2025-11-21 09:22:42,429 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 09:22:42,430 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 09:22:42,440 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 09:22:42,445 - datadeal_20251121 - INFO - 成功从表 raw_macro_data_m 加载数据，形状: (233, 14)
+2025-11-21 09:22:42,445 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 09:22:42,447 - datadeal_20251121 - INFO - 数据库连接已关闭
