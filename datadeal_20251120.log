@@ -89,3 +89,51 @@ connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection re
 2025-11-20 10:59:10,501 - datadeal_20251120 - INFO - 成功从表 raw_macro_data_m 加载数据，形状: (233, 14)
 2025-11-20 10:59:10,502 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.02s]
 2025-11-20 10:59:10,503 - datadeal_20251120 - INFO - 数据库连接已关闭
+2025-11-20 15:06:30,257 - datadeal_20251120 - INFO - 数据库连接成功: macro_data_base
+2025-11-20 15:06:30,258 - datadeal_20251120 - INFO - [Function: create_table started...]
+2025-11-20 15:06:30,259 - datadeal_20251120 - ERROR - [Function: create_table failed after 0.00s, error: EasyManager.create_table() got an unexpected keyword argument 'data']
+2025-11-20 15:06:30,259 - datadeal_20251120 - INFO - 数据库连接已关闭
+2025-11-20 15:06:51,061 - datadeal_20251120 - INFO - 数据库连接成功: macro_data_base
+2025-11-20 15:06:51,061 - datadeal_20251120 - INFO - [Function: create_table started...]
+2025-11-20 15:06:51,117 - datadeal_20251120 - INFO - 已删除现有表 lf_macro_data
+2025-11-20 15:06:51,134 - datadeal_20251120 - INFO - 表 lf_macro_data 创建成功，包含 7 列
+2025-11-20 15:06:51,152 - datadeal_20251120 - INFO - 成功插入 227 行数据到表 lf_macro_data
+2025-11-20 15:06:51,153 - datadeal_20251120 - INFO - [Function: create_table completed, elapsed time: 0.09s]
+2025-11-20 15:06:51,153 - datadeal_20251120 - INFO - 数据库连接已关闭
+2025-11-20 15:07:08,188 - datadeal_20251120 - INFO - 数据库连接成功: macro_data_base
+2025-11-20 15:07:08,189 - datadeal_20251120 - INFO - [Function: load_table started...]
+2025-11-20 15:07:08,213 - datadeal_20251120 - INFO - 按列 'index' 升序排序
+2025-11-20 15:07:08,219 - datadeal_20251120 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-20 15:07:08,220 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-20 15:07:08,221 - datadeal_20251120 - INFO - [Function: load_table started...]
+2025-11-20 15:07:08,225 - datadeal_20251120 - INFO - 按列 'index' 升序排序
+2025-11-20 15:07:08,240 - datadeal_20251120 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-20 15:07:08,241 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-20 15:07:08,243 - datadeal_20251120 - INFO - 数据库连接已关闭
+2025-11-20 15:34:29,326 - datadeal_20251120 - INFO - 数据库连接成功: macro_data_base
+2025-11-20 15:34:29,327 - datadeal_20251120 - INFO - [Function: create_table started...]
+2025-11-20 15:34:29,334 - datadeal_20251120 - INFO - 已删除现有表 lf_macro_data
+2025-11-20 15:34:29,340 - datadeal_20251120 - INFO - 表 lf_macro_data 创建成功，包含 7 列
+2025-11-20 15:34:29,351 - datadeal_20251120 - INFO - 成功插入 227 行数据到表 lf_macro_data
+2025-11-20 15:34:29,352 - datadeal_20251120 - INFO - [Function: create_table completed, elapsed time: 0.02s]
+2025-11-20 15:34:29,352 - datadeal_20251120 - INFO - 数据库连接已关闭
+2025-11-20 15:34:33,712 - datadeal_20251120 - INFO - 数据库连接成功: macro_data_base
+2025-11-20 15:34:33,713 - datadeal_20251120 - INFO - [Function: load_table started...]
+2025-11-20 15:34:33,724 - datadeal_20251120 - INFO - 按列 'index' 升序排序
+2025-11-20 15:34:33,728 - datadeal_20251120 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-20 15:34:33,729 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-20 15:34:33,730 - datadeal_20251120 - INFO - [Function: load_table started...]
+2025-11-20 15:34:33,734 - datadeal_20251120 - INFO - 按列 'index' 升序排序
+2025-11-20 15:34:33,750 - datadeal_20251120 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-20 15:34:33,751 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-20 15:34:33,752 - datadeal_20251120 - INFO - 数据库连接已关闭
+2025-11-20 17:09:06,062 - datadeal_20251120 - INFO - 数据库连接成功: macro_data_base
+2025-11-20 17:09:06,063 - datadeal_20251120 - INFO - [Function: load_table started...]
+2025-11-20 17:09:06,086 - datadeal_20251120 - INFO - 按列 'index' 升序排序
+2025-11-20 17:09:06,091 - datadeal_20251120 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-20 17:09:06,092 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-20 17:09:06,094 - datadeal_20251120 - INFO - [Function: load_table started...]
+2025-11-20 17:09:06,099 - datadeal_20251120 - INFO - 按列 'index' 升序排序
+2025-11-20 17:09:06,115 - datadeal_20251120 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-20 17:09:06,117 - datadeal_20251120 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-20 17:09:06,119 - datadeal_20251120 - INFO - 数据库连接已关闭
