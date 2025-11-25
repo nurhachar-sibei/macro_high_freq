@@ -20,7 +20,7 @@ class Config:
                            '工业规模以上企业工业增加值':'M0000545'
                            }
     #批量导入
-    RAW_MACRO_DATA_START_DATE = '2006-06-01'
+    RAW_MACRO_DATA_START_DATE = '2005-06-01'
     RAW_MACRO_DATA_END_DATE = '2025-09-30'
     #
 

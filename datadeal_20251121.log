@@ -4,3 +4,225 @@
 2025-11-21 09:22:42,445 - datadeal_20251121 - INFO - 成功从表 raw_macro_data_m 加载数据，形状: (233, 14)
 2025-11-21 09:22:42,445 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
 2025-11-21 09:22:42,447 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 13:54:55,536 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 13:54:55,537 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 13:54:55,552 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 13:54:55,556 - datadeal_20251121 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-21 13:54:55,557 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 13:54:55,560 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 13:54:55,564 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 13:54:55,579 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 13:54:55,580 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 13:54:55,583 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:10:19,594 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:10:19,595 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:10:19,605 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:10:19,609 - datadeal_20251121 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-21 16:10:19,610 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 16:10:19,611 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:10:19,614 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:10:19,626 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:10:19,627 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 16:10:19,628 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:10:43,612 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:10:43,613 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:10:43,636 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:10:43,640 - datadeal_20251121 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-21 16:10:43,641 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-21 16:10:43,642 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:10:43,644 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:10:43,654 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:10:43,655 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 16:10:43,656 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:11:21,034 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:11:21,035 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:11:21,047 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:11:21,051 - datadeal_20251121 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-21 16:11:21,052 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:11:21,055 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:11:21,059 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:11:21,073 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:11:21,074 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:11:21,077 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:11:42,738 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:11:42,739 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:11:42,752 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:11:42,756 - datadeal_20251121 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-21 16:11:42,756 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:11:42,757 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:11:42,762 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:11:42,774 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:11:42,775 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:11:42,777 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:12:06,646 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:12:06,646 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:12:06,658 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:12:06,662 - datadeal_20251121 - INFO - 成功从表 lf_macro_data 加载数据，形状: (227, 7)
+2025-11-21 16:12:06,662 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:12:06,663 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:12:06,667 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:12:06,679 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:12:06,680 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:12:06,682 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:23:11,878 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:23:11,879 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:24:06,969 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:24:06,970 - datadeal_20251121 - INFO - [Function: create_table started...]
+2025-11-21 16:24:07,026 - datadeal_20251121 - INFO - 已删除现有表 macro_high_freq_data_weekly_yoy
+2025-11-21 16:24:07,031 - datadeal_20251121 - INFO - 表 macro_high_freq_data_weekly_yoy 创建成功，包含 7 列
+2025-11-21 16:24:07,081 - datadeal_20251121 - INFO - 成功插入 1015 行数据到表 macro_high_freq_data_weekly_yoy
+2025-11-21 16:24:07,082 - datadeal_20251121 - INFO - [Function: create_table completed, elapsed time: 0.11s]
+2025-11-21 16:24:07,083 - datadeal_20251121 - INFO - [Function: create_table started...]
+2025-11-21 16:24:07,084 - datadeal_20251121 - INFO - 已删除现有表 macro_high_freq_data_weekly_mom_1
+2025-11-21 16:24:07,087 - datadeal_20251121 - INFO - 表 macro_high_freq_data_weekly_mom_1 创建成功，包含 7 列
+2025-11-21 16:24:07,135 - datadeal_20251121 - INFO - 成功插入 1016 行数据到表 macro_high_freq_data_weekly_mom_1
+2025-11-21 16:24:07,136 - datadeal_20251121 - INFO - [Function: create_table completed, elapsed time: 0.05s]
+2025-11-21 16:24:07,136 - datadeal_20251121 - INFO - [Function: create_table started...]
+2025-11-21 16:24:07,139 - datadeal_20251121 - INFO - 表 macro_high_freq_data_weekly_mom_2_net 创建成功，包含 7 列
+2025-11-21 16:24:07,185 - datadeal_20251121 - INFO - 成功插入 1016 行数据到表 macro_high_freq_data_weekly_mom_2_net
+2025-11-21 16:24:07,186 - datadeal_20251121 - INFO - [Function: create_table completed, elapsed time: 0.05s]
+2025-11-21 16:24:07,186 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:24:36,153 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:24:36,153 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:24:36,162 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:24:36,172 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:24:36,173 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:24:36,175 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:27:54,194 - datadeal_20251121 - INFO - 数据库连接成功: price_data_base
+2025-11-21 16:27:54,307 - datadeal_20251121 - INFO - 找到 1 个表
+2025-11-21 16:27:54,308 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:28:07,729 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:28:07,906 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:28:07,907 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:28:46,092 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:28:46,113 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:28:46,114 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:28:46,117 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:28:46,129 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:28:46,130 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:28:46,132 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:39:10,698 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:39:10,699 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:39:10,712 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:39:10,722 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_1 加载数据，形状: (1016, 7)
+2025-11-21 16:39:10,723 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:39:10,725 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:39:12,869 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:39:12,891 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:39:12,892 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:39:12,894 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:39:12,905 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:39:12,906 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 16:39:12,907 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:40:17,568 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:40:17,569 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:40:17,595 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:40:17,607 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:40:17,608 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.04s]
+2025-11-21 16:40:17,610 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:40:19,685 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:40:19,712 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:40:19,712 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:40:19,715 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:40:19,726 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:40:19,727 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 16:40:19,729 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:40:50,280 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:40:50,281 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:40:50,300 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:40:50,312 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:40:50,314 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-21 16:40:50,316 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:40:52,099 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:40:52,130 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:40:52,131 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:40:52,133 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:40:52,146 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:40:52,147 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:40:52,149 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:47:08,563 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:47:08,564 - datadeal_20251121 - INFO - [Function: create_table started...]
+2025-11-21 16:47:08,573 - datadeal_20251121 - INFO - 已删除现有表 macro_high_freq_data_weekly_yoy
+2025-11-21 16:47:08,579 - datadeal_20251121 - INFO - 表 macro_high_freq_data_weekly_yoy 创建成功，包含 7 列
+2025-11-21 16:47:08,625 - datadeal_20251121 - INFO - 成功插入 1015 行数据到表 macro_high_freq_data_weekly_yoy
+2025-11-21 16:47:08,625 - datadeal_20251121 - INFO - [Function: create_table completed, elapsed time: 0.06s]
+2025-11-21 16:47:08,626 - datadeal_20251121 - INFO - [Function: create_table started...]
+2025-11-21 16:47:08,627 - datadeal_20251121 - INFO - 已删除现有表 macro_high_freq_data_weekly_mom_1
+2025-11-21 16:47:08,630 - datadeal_20251121 - INFO - 表 macro_high_freq_data_weekly_mom_1 创建成功，包含 7 列
+2025-11-21 16:47:08,677 - datadeal_20251121 - INFO - 成功插入 1016 行数据到表 macro_high_freq_data_weekly_mom_1
+2025-11-21 16:47:08,678 - datadeal_20251121 - INFO - [Function: create_table completed, elapsed time: 0.05s]
+2025-11-21 16:47:08,679 - datadeal_20251121 - INFO - [Function: create_table started...]
+2025-11-21 16:47:08,680 - datadeal_20251121 - INFO - 已删除现有表 macro_high_freq_data_weekly_mom_2_net
+2025-11-21 16:47:08,684 - datadeal_20251121 - INFO - 表 macro_high_freq_data_weekly_mom_2_net 创建成功，包含 7 列
+2025-11-21 16:47:08,732 - datadeal_20251121 - INFO - 成功插入 1016 行数据到表 macro_high_freq_data_weekly_mom_2_net
+2025-11-21 16:47:08,734 - datadeal_20251121 - INFO - [Function: create_table completed, elapsed time: 0.05s]
+2025-11-21 16:47:08,735 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:47:13,393 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:47:13,394 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:47:13,407 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:47:13,416 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:47:13,417 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:47:13,418 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:47:42,237 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:47:42,271 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:47:42,271 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:47:42,275 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:47:42,287 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:47:42,288 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:47:42,289 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:50:24,009 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:50:24,011 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:50:24,022 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:50:24,032 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:50:24,032 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:50:24,037 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:50:31,117 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:50:31,118 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:50:31,139 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:50:31,151 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:50:31,152 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-21 16:50:31,156 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:50:53,091 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:50:53,093 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:50:53,116 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:50:53,126 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 16:50:53,128 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-21 16:50:53,133 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:51:00,249 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:51:00,283 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:51:00,283 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:51:00,286 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:51:00,297 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:51:00,297 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-21 16:51:00,299 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:51:40,135 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:51:40,161 - datadeal_20251121 - INFO - 找到 11 个表
+2025-11-21 16:51:40,161 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:51:40,165 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:51:40,177 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:51:40,179 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 16:51:40,180 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 16:57:03,131 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 16:57:03,132 - datadeal_20251121 - WARNING - 数据库连接已断开，正在重新连接...
+2025-11-21 16:57:03,182 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 16:57:03,202 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 16:57:03,218 - datadeal_20251121 - INFO - 成功从表 hf_asset_data_w 加载数据，形状: (1013, 14)
+2025-11-21 16:57:03,218 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.09s]
+2025-11-21 17:15:47,788 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 17:15:47,789 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 17:15:47,801 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 17:15:47,808 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_2_net 加载数据，形状: (1016, 7)
+2025-11-21 17:15:47,809 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-21 17:15:47,812 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 17:17:00,947 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 17:17:00,947 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 17:17:00,962 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 17:17:01,004 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_1 加载数据，形状: (1016, 7)
+2025-11-21 17:17:01,005 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.06s]
+2025-11-21 17:17:01,009 - datadeal_20251121 - INFO - 数据库连接已关闭
+2025-11-21 17:17:22,510 - datadeal_20251121 - INFO - 数据库连接成功: macro_data_base
+2025-11-21 17:17:22,511 - datadeal_20251121 - INFO - [Function: load_table started...]
+2025-11-21 17:17:22,528 - datadeal_20251121 - INFO - 按列 'index' 升序排序
+2025-11-21 17:17:22,537 - datadeal_20251121 - INFO - 成功从表 macro_high_freq_data_weekly_mom_1 加载数据，形状: (1016, 7)
+2025-11-21 17:17:22,538 - datadeal_20251121 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-21 17:17:22,541 - datadeal_20251121 - INFO - 数据库连接已关闭
