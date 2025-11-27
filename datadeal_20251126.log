@@ -1,0 +1,13 @@
+2025-11-26 08:32:43,979 - datadeal_20251126 - INFO - 数据库连接成功: macro_data_base
+2025-11-26 08:32:43,980 - datadeal_20251126 - INFO - [Function: load_table started...]
+2025-11-26 08:32:44,016 - datadeal_20251126 - INFO - 按列 'index' 升序排序
+2025-11-26 08:32:44,025 - datadeal_20251126 - INFO - 成功从表 macro_high_freq_data_weekly_pct 加载数据，形状: (814, 7)
+2025-11-26 08:32:44,026 - datadeal_20251126 - INFO - [Function: load_table completed, elapsed time: 0.05s]
+2025-11-26 08:32:44,032 - datadeal_20251126 - INFO - 数据库连接已关闭
+2025-11-26 08:33:11,098 - datadeal_20251126 - INFO - 数据库连接成功: macro_data_base
+2025-11-26 08:33:11,229 - datadeal_20251126 - INFO - 找到 15 个表
+2025-11-26 08:33:11,230 - datadeal_20251126 - INFO - [Function: load_table started...]
+2025-11-26 08:33:11,235 - datadeal_20251126 - INFO - 按列 'index' 升序排序
+2025-11-26 08:33:11,250 - datadeal_20251126 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-26 08:33:11,251 - datadeal_20251126 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-26 08:33:11,254 - datadeal_20251126 - INFO - 数据库连接已关闭
