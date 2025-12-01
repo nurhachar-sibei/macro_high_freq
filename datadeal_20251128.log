@@ -1,0 +1,75 @@
+2025-11-28 09:32:00,297 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 09:32:00,298 - datadeal_20251128 - INFO - [Function: create_table started...]
+2025-11-28 09:32:00,364 - datadeal_20251128 - INFO - 表 allocation_pool_1_price_daily 创建成功，包含 16 列
+2025-11-28 09:32:00,672 - datadeal_20251128 - INFO - 成功插入 4641 行数据到表 allocation_pool_1_price_daily
+2025-11-28 09:32:00,673 - datadeal_20251128 - INFO - [Function: create_table completed, elapsed time: 0.37s]
+2025-11-28 09:32:00,674 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 09:32:00,692 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 09:32:00,710 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 09:32:00,711 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.04s]
+2025-11-28 09:32:00,713 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 09:32:23,248 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 09:32:23,248 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 09:32:23,254 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 09:32:23,311 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_daily 加载数据，形状: (4641, 16)
+2025-11-28 09:32:23,313 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.06s]
+2025-11-28 09:32:23,317 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 09:58:13,251 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 09:58:13,252 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 09:58:13,264 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 09:58:13,279 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 09:58:13,280 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.03s]
+2025-11-28 09:58:13,281 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 13:32:45,217 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 13:32:45,218 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 13:32:45,227 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 13:32:45,274 - datadeal_20251128 - INFO - 成功从表 macro_high_freq_data_weekly_pct 加载数据，形状: (814, 7)
+2025-11-28 13:32:45,275 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.06s]
+2025-11-28 13:32:45,277 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 13:32:56,763 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 13:32:56,920 - datadeal_20251128 - INFO - 找到 16 个表
+2025-11-28 13:32:56,920 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 13:32:56,923 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 13:32:56,937 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 13:32:56,938 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-28 13:32:56,940 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 13:46:17,401 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 13:46:17,430 - datadeal_20251128 - INFO - 找到 16 个表
+2025-11-28 13:46:17,431 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 13:46:17,435 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 13:46:17,452 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 13:46:17,453 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-28 13:46:17,455 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 13:47:27,853 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 13:47:27,869 - datadeal_20251128 - INFO - 找到 16 个表
+2025-11-28 13:47:27,870 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 13:47:27,873 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 13:47:27,887 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 13:47:27,888 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-28 13:47:27,890 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 14:05:53,967 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 14:05:53,968 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 14:05:53,974 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 14:05:53,981 - datadeal_20251128 - INFO - 成功从表 macro_high_freq_data_weekly_pct 加载数据，形状: (814, 7)
+2025-11-28 14:05:53,982 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-28 14:05:53,985 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 14:05:55,237 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 14:05:55,269 - datadeal_20251128 - INFO - 找到 16 个表
+2025-11-28 14:05:55,270 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 14:05:55,273 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 14:05:55,289 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 14:05:55,290 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-28 14:05:55,293 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 14:07:21,147 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 14:07:21,147 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 14:07:21,154 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 14:07:21,161 - datadeal_20251128 - INFO - 成功从表 macro_high_freq_data_weekly_pct 加载数据，形状: (814, 7)
+2025-11-28 14:07:21,162 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.01s]
+2025-11-28 14:07:21,166 - datadeal_20251128 - INFO - 数据库连接已关闭
+2025-11-28 14:07:22,570 - datadeal_20251128 - INFO - 数据库连接成功: macro_data_base
+2025-11-28 14:07:22,588 - datadeal_20251128 - INFO - 找到 16 个表
+2025-11-28 14:07:22,588 - datadeal_20251128 - INFO - [Function: load_table started...]
+2025-11-28 14:07:22,592 - datadeal_20251128 - INFO - 按列 'index' 升序排序
+2025-11-28 14:07:22,604 - datadeal_20251128 - INFO - 成功从表 allocation_pool_1_price_weekly 加载数据，形状: (997, 16)
+2025-11-28 14:07:22,605 - datadeal_20251128 - INFO - [Function: load_table completed, elapsed time: 0.02s]
+2025-11-28 14:07:22,607 - datadeal_20251128 - INFO - 数据库连接已关闭

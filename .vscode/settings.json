@@ -21,5 +21,6 @@
             "database": "price_data_base",
             "username": "postgres"
         }
-    ]
+    ],
+    "chatgpt.openOnStartup": true
 }
