@@ -15,7 +15,15 @@ from Util_Fin import logger_util
 
 from config import Config
 
+DAILY_ASSET_TABLE_NAME = 'daily_asset_price'
+
 def raw_macro_data_to_db():
+    '''
+    从Wind读取原始宏观数据并存储到数据库中
+    -------------------------------
+    数据类型: 月频的宏观数据
+    数据作用: 用于计算低频宏观因子
+    '''
     main_logger = logger_util.setup_logger("data_load_from_wind",'./')
     w.start()
     main_logger.info("WindPy started")
@@ -35,6 +43,14 @@ def raw_macro_data_to_db():
         em.create_table(table_name='raw_macro_data_m',dataframe=macro_data_M,overwrite=True)
 
 def raw_macro_data_to_db_update():
+    '''
+    从Wind更新原始宏观数据并存储到数据库中
+    -------------------------------
+    数据类型: 月频的宏观数据
+    数据作用: 用于计算低频宏观因子
+    -------------------------------
+    注意: 需要在第一次先运行一次raw_macro_data_to_db()，之后只运行raw_macro_data_to_db_update()即可
+    '''
     main_logger = logger_util.setup_logger("data_load_from_wind",'./')
     w.start()
     main_logger.info("WindPy started")
@@ -115,6 +131,11 @@ def raw_macro_data_to_db_update():
 
 
 def LF_macro_data_to_db_update():
+    '''
+    从Wind数据库中读取原始宏观数据并计算低频宏观因子，最后将结果存储到本地数据库中
+    -------------------------------
+    存储数据类型: 月频的宏观因子
+    '''
     main_logger = logger_util.setup_logger("data_load_from_wind",'./')
     main_logger.info("开始计算低频宏观因子...")
     with easy_manager.EasyManager(database='macro_data_base') as em:
@@ -163,12 +184,181 @@ def _filter_future_dates(dataframe, logger=None):
         
         if logger:
             logger.info(f"过滤后数据范围: {dataframe.index.min()} 到 {dataframe.index.max()}")
-    
+
     return dataframe
+
+def daily_asset_price_to_db():
+    """
+    初始化日度资产价格数据表，使用Part 2资产列表从Wind获取日度收盘价数据
+    """
+    main_logger = logger_util.setup_logger("data_load_from_wind",'./')
+    w.start()
+    main_logger.info("WindPy started")
+    main_logger.info("开始获取日度资产价格数据...")
+
+    start_date = Config.HF_ASSET_DATA_START_DATE
+    end_date = Config.HF_ASSET_DATA_END_DATE
+
+    wsd_data = pd.DataFrame()
+    if Config.ASSET_LIST_WSD:
+        wsd_code_str = ','.join(Config.ASSET_LIST_WSD)
+        main_logger.info(f"正在获取WSD数据: {wsd_code_str}")
+        wsd_data = w.wsd(wsd_code_str,
+                         'close',
+                         start_date,
+                         end_date,
+                         usedf=True)[1]
+        wsd_data.index = pd.to_datetime(wsd_data.index)
+        wsd_data = wsd_data[Config.ASSET_LIST_WSD]
+    else:
+        main_logger.info("未配置WSD日度资产代码")
+
+    edb_data = pd.DataFrame()
+    if Config.ASSET_LIST_EDB:
+        edb_code_str = ','.join(Config.ASSET_LIST_EDB.keys())
+        main_logger.info(f"正在获取EDB数据: {edb_code_str}")
+        edb_data = w.edb(edb_code_str,
+                         start_date,
+                         end_date,
+                         "Fill=Previous",
+                         usedf=True)[1]
+        edb_data.index = pd.to_datetime(edb_data.index)
+        edb_data = edb_data[list(Config.ASSET_LIST_EDB.keys())]
+        edb_data.rename(columns=Config.ASSET_LIST_EDB, inplace=True)
+    else:
+        main_logger.info("未配置EDB日度资产代码")
+
+    asset_data_d = pd.concat([wsd_data, edb_data], axis=1)
+    asset_data_d = asset_data_d.dropna(how='all')
+    asset_data_d = _filter_future_dates(asset_data_d, main_logger)
+    main_logger.info(f"日度资产数据获取完成，形状: {asset_data_d.shape}")
+
+    with easy_manager.EasyManager(database='macro_data_base') as em:
+        em.create_table(table_name=DAILY_ASSET_TABLE_NAME,
+                        dataframe=asset_data_d,
+                        overwrite=True)
+        main_logger.info("日度资产数据已写入数据库")
+
+def daily_asset_price_to_db_update():
+    """
+    更新日度资产价格数据表，支持新增资产代码和存量代码更新
+    """
+    main_logger = logger_util.setup_logger("data_load_from_wind",'./')
+    w.start()
+    main_logger.info("WindPy started")
+
+    with easy_manager.EasyManager(database='macro_data_base') as em:
+        df = em.load_table(table_name=DAILY_ASSET_TABLE_NAME, limit=-10)
+        if df is None or len(df) == 0:
+            main_logger.error("数据库中不存在日度资产数据，请先运行daily_asset_price_to_db()初始化数据")
+            return
+        last_date = pd.to_datetime(df['index'].iloc[-1])
+        update_start_date = (last_date - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
+        last_code_list_db = df.columns.tolist()[1:]
+
+    now = datetime.datetime.now()
+    if now.hour >= 15 and now.minute >= 1:
+        today = datetime.date.today().strftime('%Y-%m-%d')
+    else:
+        today = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+    main_logger.info(f"更新起始日期: {update_start_date}，结束日期: {today}")
+
+    wsd_code_raw = list(Config.ASSET_LIST_WSD)
+    wsd_code_norm = [_normalize_code(code) for code in wsd_code_raw]
+    raw_to_norm = dict(zip(wsd_code_raw, wsd_code_norm))
+    norm_to_raw = dict(zip(wsd_code_norm, wsd_code_raw))
+
+    edb_code_map = dict(Config.ASSET_LIST_EDB)
+    edb_alias_list = list(edb_code_map.values())
+    edb_alias_to_raw = {alias: raw for raw, alias in edb_code_map.items()}
+
+    existing_wsd_norm = [code for code in last_code_list_db if code in norm_to_raw]
+    existing_wsd_raw = [norm_to_raw[code] for code in existing_wsd_norm]
+    existing_edb_alias = [code for code in last_code_list_db if code in edb_alias_to_raw]
+    existing_edb_raw = [edb_alias_to_raw[alias] for alias in existing_edb_alias]
+
+    add_wsd_norm = list(set(wsd_code_norm) - set(last_code_list_db))
+    add_wsd_raw = [norm_to_raw[code] for code in add_wsd_norm]
+    add_edb_alias = list(set(edb_alias_list) - set(last_code_list_db))
+    add_edb_raw = [edb_alias_to_raw[alias] for alias in add_edb_alias]
+
+    main_logger.info(f"数据库现有字段: {last_code_list_db}")
+    main_logger.info(f"WSD新增代码: {add_wsd_raw}")
+    main_logger.info(f"EDB新增代码: {add_edb_raw}")
+
+    def _fetch_wsd_data(code_list, start_dt, end_dt):
+        if not code_list:
+            return pd.DataFrame()
+        data = w.wsd(','.join(code_list),
+                     'close',
+                     start_dt,
+                     end_dt,
+                     usedf=True)[1]
+        data.index = pd.to_datetime(data.index)
+        data = pd.DataFrame(data)
+        data.columns = code_list
+        return data[code_list]
+
+    def _fetch_edb_data(code_list, aliases, start_dt, end_dt):
+        if not code_list:
+            return pd.DataFrame()
+        data = w.edb(','.join(code_list),
+                     start_dt,
+                     end_dt,
+                     "Fill=Previous",
+                     usedf=True)[1]
+        data.index = pd.to_datetime(data.index)
+        rename_map = {raw: alias for raw, alias in zip(code_list, aliases)}
+        data = data[code_list]
+        data.rename(columns=rename_map, inplace=True)
+        return data
+
+    with easy_manager.EasyManager(database='macro_data_base') as em:
+        # 更新存量代码
+        wsd_existing_df = _fetch_wsd_data(existing_wsd_raw, update_start_date, today)
+        edb_existing_df = _fetch_edb_data(existing_edb_raw, existing_edb_alias, update_start_date, today)
+        existing_asset_df = pd.concat([wsd_existing_df, edb_existing_df], axis=1)
+        existing_asset_df = existing_asset_df.dropna(how='all')
+        existing_asset_df = _filter_future_dates(existing_asset_df, main_logger)
+        if not existing_asset_df.empty:
+            main_logger.info("开始更新存量资产代码数据")
+            em.insert_data(table_name=DAILY_ASSET_TABLE_NAME,
+                           dataframe=existing_asset_df,
+                           mode='update')
+            main_logger.info("存量资产代码更新完成")
+        else:
+            main_logger.info("本次无存量资产数据需要更新")
+
+        # 处理新增代码
+        if add_wsd_raw or add_edb_raw:
+            main_logger.info("开始处理新增资产代码")
+            wsd_new_df = _fetch_wsd_data(add_wsd_raw,
+                                         Config.HF_ASSET_DATA_START_DATE,
+                                         today)
+            edb_new_alias = [Config.ASSET_LIST_EDB[raw] for raw in add_edb_raw]
+            edb_new_df = _fetch_edb_data(add_edb_raw,
+                                         edb_new_alias,
+                                         Config.HF_ASSET_DATA_START_DATE,
+                                         today)
+            new_asset_df = pd.concat([wsd_new_df, edb_new_df], axis=1)
+            new_asset_df = new_asset_df.dropna(how='all')
+            new_asset_df = _filter_future_dates(new_asset_df, main_logger)
+            if not new_asset_df.empty:
+                em.add_columns(table_name=DAILY_ASSET_TABLE_NAME,
+                               dataframe=new_asset_df,
+                               merge_on_index=True)
+                main_logger.info("新增资产代码写入完成")
+            else:
+                main_logger.info("新增资产代码暂无有效数据")
+        else:
+            main_logger.info("本次更新无新增资产代码")
 
 def hf_asset_data_to_db():
     """
-    初始化高频资产数据表，从Wind获取周频资产价格数据
+    初始化周频资产数据表，从Wind获取周频资产价格数据并存储到本地数据库中
+    -------------------------------
+    数据类型: 周频的资产价格数据
+    数据作用: 用于计算周频宏观因子
     """
     main_logger = logger_util.setup_logger("data_load_from_wind",'./')
     w.start()
@@ -217,16 +407,21 @@ def hf_asset_data_to_db():
     # 存储到数据库
     with easy_manager.EasyManager(database='macro_data_base') as em:
         em.create_table(table_name='hf_asset_data_w', dataframe=asset_data_w, overwrite=True)
-        main_logger.info("高频资产数据已存储到数据库")
+        main_logger.info("高频宏观因子制作-资产数据已存储到数据库")
 
 def hf_asset_data_to_db_update():
     """
-    更新高频资产数据表
+    从Wind更新周频资产价格数据并存储到数据库中
+    -------------------------------
+    数据类型: 周频的资产价格数据
+    数据作用: 用于计算周频宏观因子
+    -------------------------------
+    注意: 需要在第一次先运行一次hf_asset_data_to_db()，之后只运行hf_asset_data_to_db_update()即可
     """
     main_logger = logger_util.setup_logger("data_load_from_wind",'./')
     w.start()
     main_logger.info("WindPy started")
-    main_logger.info("开始更新高频资产数据...")
+    main_logger.info("开始更新高频宏观因子制作所需资产数据...")
     
     with easy_manager.EasyManager(database='macro_data_base') as em:
         # 获取现有数据的最后日期
@@ -423,10 +618,13 @@ if __name__ == '__main__':
     # 初始化数据（首次运行时使用）
     # raw_macro_data_to_db()
     # hf_asset_data_to_db()
+    # daily_asset_price_to_db()
     
     # 日常更新数据
-    raw_macro_data_to_db_update()
-    hf_asset_data_to_db_update()
+    # raw_macro_data_to_db_update()
+    # hf_asset_data_to_db_update()
+    daily_asset_price_to_db_update()
+
     # LF_macro_data_to_db_update()
     
     # 查看数据
@@ -447,9 +645,9 @@ if __name__ == '__main__':
         # print(df.tail(10))
         
         # 高频资产数据
-        df = em.load_table(table_name='hf_asset_data_w',order_by='index',ascending=True)
+        df = em.load_table(table_name='daily_asset_price_d',order_by='index',ascending=True)
         df.set_index("index",inplace=True)
         df.index = pd.to_datetime(df.index)
         print("\n" + "="*60)
-        print("高频资产数据:")
+        print("日频资产价格数据:")
         print(df.tail(10))
